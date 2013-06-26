@@ -24,21 +24,24 @@ echo "<div class='box col2' id='box$pid'>";
 echo "<div class='pin_holder'>";
 echo "<div class='data'>";
 $upload_id=$data[2];
+
 if($upload_id)
 {
 $img_query=mysql_query("Select image_path from uploads where id=$upload_id");
 $result=mysql_fetch_array($img_query);
 $img_path=$result['image_path'];
 echo "<div style='margin-bottom:5px;'><img src='upload/$img_path' class='pin_image'></div>";
-echo "<div>$pin</div></div>";
+echo "<div class=message>$pin</div></div>";
 }
 else
 {
-echo "<div><b>$pin</b></div></div>";
+echo "<div class=message><b>$pin</b></div></div>";
 }
 echo "</div>";
-echo "<div style='margin-left:10px;'><a href='#' class='commentopen' id='$pid'><small>Comment</small></a></div>";
 
+?>
+<div style='margin-right:10px;'><a href='#' class='' id=<?php echo $pin; ?>>TRUE</a></div>
+<?php
 }
 }
 ?>

@@ -89,13 +89,28 @@ include ("includes/db.php");
 		
 	</div>
 
-	<div class="row"><!-- Start Grid Section -->
+	<br>
 	
-		<div class="large-8 columns">
+	<div class="row"><!-- Start Grid Section -->
+		
+		<div class="large-4 columns" style="text-align:right;"><img src=img/arrow.png> Point at place on maps then.. </div>
+		<div class="large-6 columns">
+			<input type='text' id='pin_update' class='textbox' name='pin_update' placeholder='Type your story here...' maxlength='1000'/>
+		</div>
+				
+		<div id='button_area' class="large-2 columns">
+			<input type='submit' id='pin_submit' class='pin_button' value="Post!"/>
+		</div>
+	
+	</div>
+	
+	<div class="row">		
+					
+		<div class="large-12 columns">
 			<?php include ("load_pin.php"); ?>
 		</div>
 
-		<div class="large-4 columns" style="text-align:center;">
+		<!--<div class="large-4 columns" style="text-align:center;">
 		
 			<div class="orbit-container orbit-stack-on-small">
     

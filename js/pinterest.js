@@ -2,6 +2,9 @@ $(function() {
 $("#pin_submit").click(function() 
 {
 var pin = $("#pin_update").val();
+
+var panjang = $("#pin_update").val().length;
+
 var x = $('.preview').attr('id');
 if(x)
 var z= x;
@@ -9,9 +12,9 @@ else
 var z=0;
 var dataString = 'pin='+ pin+ '&z=' +z;
 
-if(pin=='')
+if(panjang < 140)
 {
-alert('Please type your story...');
+alert('Please type your true-story...');
 }
 else
 {
